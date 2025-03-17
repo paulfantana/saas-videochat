@@ -1,0 +1,17 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "SaaS Videochat Backend Running"}
+
+@app.get("/earnings/{model_id}")
+def get_earnings(model_id: int):
+    # Aici vom adăuga logica pentru a extrage venitul modelului
+    return {"model_id": model_id, "earnings": "To be implemented"}
+
+@app.get("/hours/{model_id}")
+def get_hours(model_id: int):
+    # Aici vom adăuga logica pentru a extrage orele lucrate de model
+    return {"model_id": model_id, "hours_worked": "To be implemented"}
